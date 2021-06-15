@@ -1,7 +1,10 @@
 import Head from "next/head";
-import {Container} from "../styles/Home";
+import Banner from "../components/Banner";
+import data from "../../products.json";
 
-export default function Home() {
+import { Container } from "../styles/Home";
+
+export default function Home({ bannerProduct }) {
   return (
     <Container>
       <Head>
@@ -11,6 +14,16 @@ export default function Home() {
           content="E-commerce de eletrônicos, portáteis e informática."
         />
       </Head>
+
+      <Banner product={bannerProduct} />
     </Container>
   );
+}
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      bannerProduct: data.bannerProduct,
+    },
+  };
 }
