@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
+
 import data from "../../data.json";
 
 import { Container } from "../styles/Home";
+import Categories from "../components/Categories";
 
 export default function Home({ bannerProduct, categories }) {
   return (
@@ -16,6 +18,8 @@ export default function Home({ bannerProduct, categories }) {
       </Head>
 
       <Banner product={bannerProduct} />
+
+      <Categories categories={categories} />
     </Container>
   );
 }
