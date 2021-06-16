@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
@@ -30,6 +30,13 @@ export const ControlButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      color: var(--gray-50);
+      cursor: not-allowed;
+    `}
 `;
 
 export const PreviousButton = styled(ControlButton)`

@@ -30,7 +30,10 @@ const CardsCarousel = ({ items, CardTemplate, numberOfCardsOnSlide }) => {
   return (
     <Container>
       <Slide numberOfCards={numberOfCardsOnSlide}>
-        <PreviousButton onClick={previousSlide}>
+        <PreviousButton
+          onClick={previousSlide}
+          disabled={firstCardIndexOnSlide === 0}
+        >
           <MdKeyboardArrowLeft />
         </PreviousButton>
         {items
@@ -38,7 +41,10 @@ const CardsCarousel = ({ items, CardTemplate, numberOfCardsOnSlide }) => {
           .map((data) => (
             <CardTemplate key={data.id} data={data} />
           ))}
-        <NextButton onClick={nextSlide}>
+        <NextButton
+          onClick={nextSlide}
+          disabled={lastCardIndexOnSlide >= items.length}
+        >
           <MdKeyboardArrowRight />
         </NextButton>
       </Slide>
