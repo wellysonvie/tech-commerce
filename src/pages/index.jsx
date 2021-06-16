@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
-import data from "../../products.json";
+import data from "../../data.json";
 
 import { Container } from "../styles/Home";
 
-export default function Home({ bannerProduct }) {
+export default function Home({ bannerProduct, categories }) {
   return (
     <Container>
       <Head>
@@ -24,6 +24,7 @@ export async function getServerSideProps() {
   return {
     props: {
       bannerProduct: data.bannerProduct,
+      categories: data.categories,
     },
   };
 }

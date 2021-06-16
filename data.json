@@ -6,6 +6,44 @@
     "description": "Compatível com vários consoles. Apresenta controles de áudio no fio. Um controle ajustável de aço no arco da cabeça e fones de ouvido macios. O microfone flexível e giratório te permite posicionar o microfone onde quiser. Conforto e qualidade de som.",
     "discount": "25% de desconto somente hoje"
   },
+  "categories": [
+    {
+      "id": 1,
+      "name": "Acessórios",
+      "description": "",
+      "image": "/assets/imgs/61IP+RNgTKL._AC_SL1500_-removebg-preview.png"
+    },
+    {
+      "id": 2,
+      "name": "Wearables",
+      "description": "",
+      "image": "/assets/imgs/61LyahVjFFL._AC_SL1204_-removebg-preview.png"
+    },
+    {
+      "id": 3,
+      "name": "Smartphones",
+      "description": "",
+      "image": "/assets/imgs/51c+J05BU5L._AC_SL1000_-removebg-preview.png"
+    },
+    {
+      "id": 4,
+      "name": "Tablets",
+      "description": "",
+      "image": "/assets/imgs/71gOkVA6-eL._AC_SL1500_-removebg-preview.png"
+    },
+    {
+      "id": 5,
+      "name": "Notebooks",
+      "description": "",
+      "image": "/assets/imgs/71an9eiBxpL._AC_SL1500_-removebg-preview.png"
+    },
+    {
+      "id": 6,
+      "name": "Gamer",
+      "description": "",
+      "image": "/assets/imgs/51GYlpm6k9L._AC_SL1000_-removebg-preview.png"
+    }
+  ],
   "featuredProducts": [
     {
       "id": "headset-hyperx-cloud-stinger-core",
@@ -14,7 +52,6 @@
         "/assets/imgs/71MdQ+rLxGL._AC_SL1428_.jpg",
         "/assets/imgs/61D4hCEiq1L._AC_SL1428_.jpg"
       ],
-      "bannerImage": "/assets/imgs/71MdQ+rLxGL._AC_SL1428_-removebg-preview.png",
       "name": "Headset Gamer HyperX Cloud Stinger Core",
       "price": "199,90",
       "description": "Compatível com vários consoles. Apresenta controles de áudio no fio. Um controle ajustável de aço no arco da cabeça e fones de ouvido macios. O microfone flexível e giratório te permite posicionar o microfone onde quiser. Conforto e qualidade de som.",
@@ -31,7 +68,6 @@
         "/assets/imgs/71Wsyw1eNiL._AC_SL1500_.jpg",
         "/assets/imgs/81iqNfLj4DL._AC_SL1500_.jpg"
       ],
-      "bannerImage": "",
       "name": "Controle Dualshock 4 - PlayStation 4 - Preto",
       "price": "299,00",
       "description": "Funciona no PlayStation 5 em jogos PS4 compatíveis. Combinação de recursos revolucionários e conforto com controles precisos e intuitivos. Recarga fácil e eficiente. Touchpad, barra de luz e alto-falante integrados. Compartilhamento fácil: basta pressionar o botão share. Faça upload de vídeos e capturas de tela de sua partida diretamente de seu sistema ou a reproduza ao vivo, tudo isso sem interromper o jogo em andamento.",
@@ -48,7 +84,6 @@
         "/assets/imgs/31ATcQgqwoL._AC_.jpg",
         "/assets/imgs/31P-6W2hEXL._AC_.jpg"
       ],
-      "bannerImage": "",
       "name": "Notebook Lenovo Ultrafino Ideapad S145 i5-1035G1, 8GB 1TB Windows 10 15.6\"",
       "price": "3.499,90",
       "description": "Windows 10 Home. Tela Antirreflexo de 15.6\" proporciona maior conforto visual e definição de imagem. Design leve e compacto. Expansão de armazenamento: slot disponível SSD NVMe M.2. Teclado numérico. WiFi AC.",
@@ -65,7 +100,6 @@
         "/assets/imgs/51cGlc10tHL._AC_SL1000_.jpg",
         "/assets/imgs/51xU0Ii4bFL._AC_SL1000_.jpg"
       ],
-      "bannerImage": "",
       "name": "Xiaomi Redmi Note 10 4GB+128GB Versão global Lake Green",
       "price": "1.520,00",
       "description": "Principais características: Tela Super AMOLED de 6,43 polegadas com resolução FHD+ Display com furo Processador Snapdragon 678 6 GB de RAM 128 GB de armazenamento interno Memória expansível com cartão MicroSD Câmera frontal de 13 MP Quatro câmeras traseiras: Sensor principal de 48 MP (f/1.79) Sensor grande-angular de 8 MP (118º) Sensor macro de 2 MP (f/2.2) Sensor de profundidade de 2 MP (f/2.4) Leitor de digitais na lateral, som estéreo, porta P2, 4G e WiFi de banda dupla Bateria de 5.000 mAh com carregamento rápido de 33W Android 11 rodando sob a interface MIUI 12.",

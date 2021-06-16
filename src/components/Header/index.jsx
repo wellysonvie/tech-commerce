@@ -20,6 +20,8 @@ import {
   MenuCart,
 } from "./styles";
 
+import data from "../../../data.json";
+
 const Header = () => {
   return (
     <Container>
@@ -43,10 +45,11 @@ const Header = () => {
           <Search>
             <Filter>
               <option value="">Tudo</option>
-              <option value="">Acessórios</option>
-              <option value="">Smartphones</option>
-              <option value="">Notebooks</option>
-              <option value="">Gamer</option>
+              {data.categories.map(({ id, name }) => (
+                <option key={id} value={id}>
+                  {name}
+                </option>
+              ))}
             </Filter>
             <Input type="text" placeholder="Pesquise aqui" />
           </Search>
