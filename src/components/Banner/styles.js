@@ -59,20 +59,20 @@ export const ProductImage = styled.div`
     width: auto;
     height: 100%;
     object-fit: cover;
-  }
 
-  animation: backInRight 0.8s ease-out;
-  animation-fill-mode: both;
+    animation: backInRight 0.8s ease-out;
+    animation-fill-mode: both;
 
-  @keyframes backInRight {
-    from {
-      padding-left: 30%;
-      opacity: 0;
-    }
+    @keyframes backInRight {
+      from {
+        padding-left: 50%;
+        opacity: 0;
+      }
 
-    to {
-      padding-left: 0%;
-      opacity: 1;
+      to {
+        padding-left: 0%;
+        opacity: 1;
+      }
     }
   }
 `;
