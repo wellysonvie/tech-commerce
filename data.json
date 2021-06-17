@@ -116,6 +116,76 @@
       },
       "discount": "20% OFF",
       "stock": "5"
+    },
+    {
+      "id": "mouse-gamer-rgb-logitech-g403-hero",
+      "images": [
+        "/assets/imgs/51g8GGBXJwL._AC_SL1000_.jpg",
+        "/assets/imgs/510zzEGxZuL._AC_SL1000_.jpg",
+        "/assets/imgs/41rzdZ2LBtL._AC_SL1000_.jpg"
+      ],
+      "brand": "Logitech",
+      "name": "Mouse Gamer RGB Logitech G403 HERO",
+      "price": "$209,90",
+      "description": "Sensor Hero 25K com rastreamento máximo de 25.600 DPI. Iluminação RGB LIGHTSYNC. Design confortável com laterais emborrachadas e peso opcional de 10g. Software LOGITECH G HUB. Tecnologia avançada de tensionamento de botão de mola de metal.",
+      "rating": {
+        "stars": "4.9",
+        "quantity": "788"
+      },
+      "discount": "10% OFF",
+      "stock": "8"
+    },
+    {
+      "id": "fones-de-ouvido-redmi-airdots-bluetooth-5",
+      "images": [
+        "/assets/imgs/51ql07y5wbL._AC_SL1000_.jpg"
+      ],
+      "brand": "Redmi",
+      "name": "Fones de ouvido Redmi Airdots Bluetooth 5.0",
+      "price": "$117,90",
+      "description": "‎Fones de ouvido Xiaomi Redmi Redmi Airdots Bluetooth 5.0 com Google Voice Assistant, fones de ouvido Bluetooth 12h Reprodução True Earphones com estojo de carregamento portátil.",
+      "rating": {
+        "stars": "4.4",
+        "quantity": "6.000"
+      },
+      "discount": "5% OFF",
+      "stock": "5"
+    },
+    {
+      "id": "relogio-xiaomi-amazfit-bip-smartwatch",
+      "images": [
+        "/assets/imgs/51Dnd3iYceL._AC_SL1000_.jpg",
+        "/assets/imgs/5114gWxeiiL._AC_SL1000_.jpg",
+        "/assets/imgs/51zIw2KLO5L._AC_SL1000_.jpg"
+      ],
+      "brand": "Xiaomi",
+      "name": "Relógio Xiaomi Amazfit Bip Smartwatch",
+      "price": "$374,90",
+      "description": "Amazfit Bip (Pace Lite), GPS, Tela: Corning Gorilla Glass Screen, Ip68 e Aplicativo: Mi Fit.",
+      "rating": {
+        "stars": "4.5",
+        "quantity": "2.300"
+      },
+      "discount": "8% OFF",
+      "stock": "4"
+    },
+    {
+      "id": "galaxy-tab-t290-8-wi-fi-samsung-preto",
+      "images": [
+        "/assets/imgs/51gUgOigTgL._AC_SL1000_.jpg",
+        "/assets/imgs/41EJ8GgfD2L._AC_SL1000_.jpg",
+        "/assets/imgs/51eN9mj5gQL._AC_SL1000_.jpg"
+      ],
+      "brand": "Samsung",
+      "name": "Galaxy Tab T290 a 8\" Wi-Fi, Samsung, Preto",
+      "price": "$880,90",
+      "description": "Tela Infinita de 8.0\", Câmera Traseira de 8MP, Câmera frontal de 2MP, 32GB de Memória Interna e 2GB RAM e Bateria de 5.100mAh.",
+      "rating": {
+        "stars": "4.7",
+        "quantity": "278"
+      },
+      "discount": "10% OFF",
+      "stock": "5"
     }
   ]
 }
