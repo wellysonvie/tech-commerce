@@ -5,6 +5,8 @@ import {
   MdShoppingCart,
 } from "react-icons/md";
 
+import { useBag } from "../../contexts/BagContext";
+
 import {
   Container,
   HeaderInfo,
@@ -23,6 +25,8 @@ import {
 import data from "../../../data.json";
 
 const Header = () => {
+  const { bagProducts } = useBag();
+
   return (
     <Container>
       <HeaderInfo>
@@ -60,7 +64,7 @@ const Header = () => {
             </MenuSignIn>
             <MenuCart href="#">
               <MdShoppingCart />
-              &nbsp; <span>0</span>
+              &nbsp; <span>{bagProducts.length}</span>
             </MenuCart>
           </Menu>
         </Content>

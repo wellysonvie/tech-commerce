@@ -103,6 +103,23 @@ export const ProductPrice = styled.p`
   color: var(--dark-blue-50);
 `;
 
+export const CardFooter = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  svg {
+    height: 100%;
+    padding-left: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--white);
+  }
+`;
+
 export const ProductStock = styled.p`
   font-size: 0.8rem;
   font-weight: 300;
