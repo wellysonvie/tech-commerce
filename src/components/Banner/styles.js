@@ -60,6 +60,21 @@ export const ProductImage = styled.div`
     height: 100%;
     object-fit: cover;
   }
+
+  animation: backInRight 0.8s ease-out;
+  animation-fill-mode: both;
+
+  @keyframes backInRight {
+    from {
+      padding-left: 30%;
+      opacity: 0;
+    }
+
+    to {
+      padding-left: 0%;
+      opacity: 1;
+    }
+  }
 `;
 
 export const PurchaseButton = styled.a`
