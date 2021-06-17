@@ -8,7 +8,7 @@ export const Container = styled.footer`
 `;
 
 export const Content = styled.div`
-  width: min(80rem, 90vw);
+  width: min(75rem, 90vw);
   margin: 0 auto;
 
   display: flex;

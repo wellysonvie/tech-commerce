@@ -11,7 +11,7 @@ export const Container = styled.section`
 `;
 
 export const Content = styled.div`
-  width: min(80rem, 90vw);
+  width: min(75rem, 90vw);
   height: 100%;
   margin: 0 auto;
 
