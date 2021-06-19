@@ -7,9 +7,10 @@ import {
   CartItemsList,
   ModalFooter,
   CheckoutButton,
+  ModalOverlay,
 } from "./styles";
 
-const CartModal = () => {
+const CartModal = ({ closeCartModal }) => {
   const { bagProducts, totalPurchasePrice, totalItems } = useBag();
 
   return (
@@ -41,6 +42,7 @@ const CartModal = () => {
           Finalizar compra
         </CheckoutButton>
       </ModalFooter>
+      <ModalOverlay onClick={closeCartModal} />
     </Container>
   );
 };

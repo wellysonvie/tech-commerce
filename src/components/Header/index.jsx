@@ -68,11 +68,13 @@ const Header = () => {
               </a>
             </MenuSignIn>
             <MenuCart href="#">
-              <a onClick={() => setShowCartModal(!showCartModal)}>
+              <a onClick={() => setShowCartModal(true)}>
                 <MdShoppingCart />
                 &nbsp; <span>{totalItems}</span>
               </a>
-              {showCartModal && <CartModal />}
+              {showCartModal && (
+                <CartModal closeCartModal={() => setShowCartModal(false)} />
+              )}
             </MenuCart>
           </Menu>
         </Content>
