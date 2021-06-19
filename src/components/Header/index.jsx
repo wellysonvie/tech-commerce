@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   MdLocalShipping,
   MdPhone,
@@ -5,6 +6,7 @@ import {
   MdShoppingCart,
 } from "react-icons/md";
 
+import CartModal from "../CartModal";
 import { useBag } from "../../contexts/BagContext";
 
 import {
@@ -25,7 +27,8 @@ import {
 import data from "../../../data.json";
 
 const Header = () => {
-  const { bagProducts } = useBag();
+  const [showCartModal, setShowCartModal] = useState(false);
+  const { totalItems } = useBag();
 
   return (
     <Container>
@@ -43,7 +46,7 @@ const Header = () => {
       </HeaderInfo>
       <NavBar>
         <Content>
-          <Brand>
+          <Brand href="">
             <span>Tech</span> Commerce
           </Brand>
           <Search>
@@ -59,12 +62,17 @@ const Header = () => {
           </Search>
           <Menu>
             <MenuSignIn href="#">
-              <MdPerson />
-              &nbsp; Entrar
+              <a>
+                <MdPerson />
+                &nbsp; Entrar
+              </a>
             </MenuSignIn>
             <MenuCart href="#">
-              <MdShoppingCart />
-              &nbsp; <span>{bagProducts.length}</span>
+              <a onClick={() => setShowCartModal(!showCartModal)}>
+                <MdShoppingCart />
+                &nbsp; <span>{totalItems}</span>
+              </a>
+              {showCartModal && <CartModal />}
             </MenuCart>
           </Menu>
         </Content>

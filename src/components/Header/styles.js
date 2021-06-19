@@ -39,7 +39,7 @@ export const NavBar = styled.nav`
   background-color: var(--blue);
 `;
 
-export const Brand = styled.h1`
+export const Brand = styled.a`
   font-size: 1.4rem;
   font-weight: 300;
   color: var(--white);
@@ -93,18 +93,28 @@ export const Menu = styled.div`
   align-items: center;
 `;
 
-export const MenuItem = styled.a`
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--white);
+export const MenuItem = styled.div`
+  > a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
 
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
+    cursor: pointer;
 
-  svg {
-    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    svg {
+      font-size: 1.2rem;
+    }
+
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `;
 
@@ -113,7 +123,9 @@ export const MenuSignIn = styled(MenuItem)`
 `;
 
 export const MenuCart = styled(MenuItem)`
-  span {
+  position: relative;
+
+  > a > span {
     height: 1.5rem;
     padding: 0 0.5rem;
     border-radius: 50%;
