@@ -25,6 +25,17 @@ export const Container = styled.div`
     border-right: 0.8rem solid transparent;
     border-bottom: 0.8rem solid var(--white);
   }
+
+  @media screen and (max-width: 640px) {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 80vh;
+
+    #triangle {
+      display: none;
+    }
+  }
 `;
 
 export const ModalHeader = styled.div`
@@ -43,9 +54,25 @@ export const ModalHeader = styled.div`
   }
 
   h2 {
+    margin-left: auto;
     font-size: 1rem;
     font-weight: 400;
     color: var(--dark-blue-50);
+  }
+
+  a {
+    display: none;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--pink);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 640px) {
+    a {
+      display: block;
+    }
   }
 `;
 

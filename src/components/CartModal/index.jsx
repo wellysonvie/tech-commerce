@@ -19,6 +19,7 @@ const CartModal = ({ closeCartModal }) => {
       <ModalHeader>
         <h1>Meu carrinho</h1>
         <h2>{totalItems} itens</h2>
+        <a onClick={closeCartModal}>Fechar</a>
       </ModalHeader>
       {bagProducts.length > 0 ? (
         <CartItemsList>
