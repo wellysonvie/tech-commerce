@@ -9,7 +9,7 @@ const Categories = ({ categories }) => {
 
   function updateNumberOfCards(matches) {
     setNumberOfCards(() => {
-      if (matches.small) return 1;
+      if (matches.medium) return 1;
       if (matches.large) return 2;
       else return 3;
     });
@@ -19,7 +19,7 @@ const Categories = ({ categories }) => {
     <Container>
       <Media
         queries={{
-          small: "(max-width: 640px)",
+          medium: "(max-width: 768px)",
           large: "(max-width: 1024px)",
         }}
         onChange={updateNumberOfCards}
