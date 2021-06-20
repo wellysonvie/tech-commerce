@@ -13,6 +13,8 @@ import {
   Container,
   HeaderInfo,
   Content,
+  HeaderInfoContent,
+  NavBarContent,
   Info,
   NavBar,
   Brand,
@@ -33,7 +35,7 @@ const Header = () => {
   return (
     <Container>
       <HeaderInfo>
-        <Content>
+        <HeaderInfoContent>
           <Info>
             <MdLocalShipping />
             &nbsp; Frete grátis em pedidos a partir de $100
@@ -42,10 +44,10 @@ const Header = () => {
             <MdPhone />
             &nbsp; SAC 00 9999-9999
           </Info>
-        </Content>
+        </HeaderInfoContent>
       </HeaderInfo>
       <NavBar>
-        <Content>
+        <NavBarContent>
           <Brand href="">
             <span>Tech</span> Commerce
           </Brand>
@@ -64,7 +66,7 @@ const Header = () => {
             <MenuSignIn href="#">
               <a>
                 <MdPerson />
-                &nbsp; Entrar
+                &nbsp; <span>Entrar</span>
               </a>
             </MenuSignIn>
             <MenuCart href="#">
@@ -77,7 +79,7 @@ const Header = () => {
               )}
             </MenuCart>
           </Menu>
-        </Content>
+        </NavBarContent>
       </NavBar>
     </Container>
   );
