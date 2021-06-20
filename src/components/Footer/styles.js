@@ -14,6 +14,10 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 export const Links = styled.div`
@@ -29,6 +33,17 @@ export const Links = styled.div`
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    a {
+      margin: 0.5rem;
+      text-align: center;
     }
   }
 `;
@@ -48,5 +63,10 @@ export const Credits = styled.div`
 
   span {
     font-size: 0.75rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    text-align: center;
   }
 `;
