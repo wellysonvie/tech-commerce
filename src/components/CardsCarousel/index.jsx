@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import {
   Container,
@@ -12,6 +12,11 @@ const CardsCarousel = ({ items, CardTemplate, numberOfCardsOnSlide }) => {
   const [firstCardIndexOnSlide, setFirstCardIndexOnSlide] = useState(0);
   const [lastCardIndexOnSlide, setLastCardIndexOnSlide] =
     useState(numberOfCardsOnSlide);
+
+  useEffect(() => {
+    setFirstCardIndexOnSlide(0);
+    setLastCardIndexOnSlide(numberOfCardsOnSlide);
+  }, [numberOfCardsOnSlide]);
 
   function previousSlide() {
     if (firstCardIndexOnSlide !== 0) {
