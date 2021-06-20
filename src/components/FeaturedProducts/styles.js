@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  width: min(75rem, 90vw);
+  width: min(75rem, 80vw);
   margin: 1.5rem auto;
 `;
 
@@ -26,6 +26,20 @@ export const Header = styled.header`
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+    }
+
+    a {
+      font-size: 1rem;
     }
   }
 `;

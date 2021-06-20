@@ -20,14 +20,14 @@ const FeaturedProducts = ({ products }) => {
     <Container>
       <Header>
         <h1>Produtos em destaque</h1>
-        <a href="#">Ver mais produtos</a>
+        <a href="#">+ Ver mais produtos</a>
       </Header>
 
       <Media
         queries={{
           small: "(max-width: 640px)",
-          medium: "(max-width: 768px)",
-          large: "(max-width: 1024px)",
+          medium: "(max-width: 900px)",
+          large: "(max-width: 1200px)",
         }}
         onChange={updateNumberOfCards}
       />
