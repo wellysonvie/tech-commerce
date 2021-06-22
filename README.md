@@ -1,11 +1,11 @@
 # Tech-commerce
 
-E-commerce simples utilizando Next.js. 
+E-commerce simples utilizando Next.js.
 
 Acessar a demonstração: https://tech-commerce-two.vercel.app
 
 <p align="center">
-  <img alt="Tech commerce screenshot" src="/public/assets/imgs/screenshot.webp" width="100%">
+  <img alt="Tech commerce screenshot" src=".github/screenshot.webp" width="100%">
 </p>
 
 ## ⚙️ Tecnologias
