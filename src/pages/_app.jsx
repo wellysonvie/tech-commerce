@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { BagProvider } from "../contexts/BagContext";
 
 import GlobalStyle from "../styles/global";
 
@@ -10,10 +11,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <App>
       <GlobalStyle />
-      <Header />
-      <main>
-        <Component {...pageProps} />
-      </main>
+      <BagProvider>
+        <Header />
+        <main>
+          <Component {...pageProps} />
+        </main>
+      </BagProvider>
       <Footer />
     </App>
   );

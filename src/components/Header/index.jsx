@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   MdLocalShipping,
   MdPhone,
@@ -5,10 +6,15 @@ import {
   MdShoppingCart,
 } from "react-icons/md";
 
+import CartModal from "../CartModal";
+import { useBag } from "../../contexts/BagContext";
+
 import {
   Container,
   HeaderInfo,
   Content,
+  HeaderInfoContent,
+  NavBarContent,
   Info,
   NavBar,
   Brand,
@@ -23,10 +29,13 @@ import {
 import data from "../../../data.json";
 
 const Header = () => {
+  const [showCartModal, setShowCartModal] = useState(false);
+  const { totalItems } = useBag();
+
   return (
     <Container>
       <HeaderInfo>
-        <Content>
+        <HeaderInfoContent>
           <Info>
             <MdLocalShipping />
             &nbsp; Frete grátis em pedidos a partir de $100
@@ -35,11 +44,11 @@ const Header = () => {
             <MdPhone />
             &nbsp; SAC 00 9999-9999
           </Info>
-        </Content>
+        </HeaderInfoContent>
       </HeaderInfo>
       <NavBar>
-        <Content>
-          <Brand>
+        <NavBarContent>
+          <Brand href="">
             <span>Tech</span> Commerce
           </Brand>
           <Search>
@@ -55,15 +64,22 @@ const Header = () => {
           </Search>
           <Menu>
             <MenuSignIn href="#">
-              <MdPerson />
-              &nbsp; Entrar
+              <a>
+                <MdPerson />
+                &nbsp; <span>Entrar</span>
+              </a>
             </MenuSignIn>
             <MenuCart href="#">
-              <MdShoppingCart />
-              &nbsp; <span>0</span>
+              <a onClick={() => setShowCartModal(true)}>
+                <MdShoppingCart />
+                &nbsp; <span>{totalItems}</span>
+              </a>
+              {showCartModal && (
+                <CartModal closeCartModal={() => setShowCartModal(false)} />
+              )}
             </MenuCart>
           </Menu>
-        </Content>
+        </NavBarContent>
       </NavBar>
     </Container>
   );

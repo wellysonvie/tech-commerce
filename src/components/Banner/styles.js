@@ -8,16 +8,26 @@ export const Container = styled.section`
     var(--dark-blue-50) 40%,
     #5443bb 100%
   );
+
+  @media screen and (max-width: 640px) {
+    height: 30rem;
+  }
 `;
 
 export const Content = styled.div`
-  width: min(80rem, 90vw);
+  width: min(75rem, 90vw);
   height: 100%;
   margin: 0 auto;
+
+  position: relative;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const ProductDescription = styled.div`
@@ -48,6 +58,27 @@ export const ProductDescription = styled.div`
     line-height: 1.5;
     color: var(--white);
   }
+
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    margin-right: 0;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    h1 {
+      margin-bottom: 0.7rem;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+    }
+  }
 `;
 
 export const ProductImage = styled.div`
@@ -59,6 +90,25 @@ export const ProductImage = styled.div`
     width: auto;
     height: 100%;
     object-fit: cover;
+
+    animation: backInRight 0.8s ease-out;
+    animation-fill-mode: both;
+
+    @keyframes backInRight {
+      from {
+        padding-left: 50%;
+        opacity: 0;
+      }
+
+      to {
+        padding-left: 0%;
+        opacity: 1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
   }
 `;
 
@@ -82,5 +132,11 @@ export const PurchaseButton = styled.a`
 
   &:hover {
     filter: brightness(90%);
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 8rem;
+    height: 3.2rem;
+    font-size: 0.875rem;
   }
 `;

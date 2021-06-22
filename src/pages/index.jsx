@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
+import Categories from "../components/Categories";
+import FeaturedProducts from "../components/FeaturedProducts";
 
 import data from "../../data.json";
 
 import { Container } from "../styles/Home";
-import Categories from "../components/Categories";
 
-export default function Home({ bannerProduct, categories }) {
+export default function Home({ bannerProduct, categories, featuredProducts }) {
   return (
     <Container>
       <Head>
@@ -18,8 +19,8 @@ export default function Home({ bannerProduct, categories }) {
       </Head>
 
       <Banner product={bannerProduct} />
-
       <Categories categories={categories} />
+      <FeaturedProducts products={featuredProducts} />
     </Container>
   );
 }
@@ -29,6 +30,7 @@ export async function getServerSideProps() {
     props: {
       bannerProduct: data.bannerProduct,
       categories: data.categories,
+      featuredProducts: data.featuredProducts,
     },
   };
 }

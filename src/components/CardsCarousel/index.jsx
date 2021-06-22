@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import {
   Container,
@@ -12,6 +12,11 @@ const CardsCarousel = ({ items, CardTemplate, numberOfCardsOnSlide }) => {
   const [firstCardIndexOnSlide, setFirstCardIndexOnSlide] = useState(0);
   const [lastCardIndexOnSlide, setLastCardIndexOnSlide] =
     useState(numberOfCardsOnSlide);
+
+  useEffect(() => {
+    setFirstCardIndexOnSlide(0);
+    setLastCardIndexOnSlide(numberOfCardsOnSlide);
+  }, [numberOfCardsOnSlide]);
 
   function previousSlide() {
     if (firstCardIndexOnSlide !== 0) {
@@ -30,7 +35,10 @@ const CardsCarousel = ({ items, CardTemplate, numberOfCardsOnSlide }) => {
   return (
     <Container>
       <Slide numberOfCards={numberOfCardsOnSlide}>
-        <PreviousButton onClick={previousSlide}>
+        <PreviousButton
+          onClick={previousSlide}
+          disabled={firstCardIndexOnSlide === 0}
+        >
           <MdKeyboardArrowLeft />
         </PreviousButton>
         {items
@@ -38,7 +46,10 @@ const CardsCarousel = ({ items, CardTemplate, numberOfCardsOnSlide }) => {
           .map((data) => (
             <CardTemplate key={data.id} data={data} />
           ))}
-        <NextButton onClick={nextSlide}>
+        <NextButton
+          onClick={nextSlide}
+          disabled={lastCardIndexOnSlide >= items.length}
+        >
           <MdKeyboardArrowRight />
         </NextButton>
       </Slide>
