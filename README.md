@@ -10,15 +10,32 @@ Acessar a demonstração: https://tech-commerce-two.vercel.app
 
 ## ⚙️ Tecnologias
 
-- HTML5/CSS3
 - ReactJS
 - Styled-components
 - Next.js
 
 ## 🚀 Como executar
 
-- Clone o repositório
-- Instale as dependências com `yarn`
-- Inicie o servidor de desenvolvimento com `yarn dev`
+Clone o projeto e acesse a pasta do mesmo.
 
-Agora você pode acessar [`localhost:3000`](http://localhost:3000) no navegador.
+```bash
+$ git clone https://github.com/wellysonvie/tech-commerce.git
+$ cd tech-commerce
+```
+
+Para iniciá-lo, siga os passos abaixo:
+```bash
+# Instalar as dependências
+$ yarn
+
+# Iniciar o projeto
+$ yarn dev
+```
+
+Agora você pode acessar [`http://localhost:3000`](http://localhost:3000) no navegador.
+
+## 🔖 Layout
+
+A interface do projeto foi inspirada no seguinte layout:
+
+https://dribbble.com/shots/15486971-Store-Design
