@@ -16,8 +16,8 @@ function MyApp({ Component, pageProps }) {
         <main>
           <Component {...pageProps} />
         </main>
+        <Footer />
       </BagProvider>
-      <Footer />
     </App>
   );
 }

@@ -24,6 +24,10 @@ export function BagProvider({ children }) {
     return bagProducts.some((product) => product.id === productId);
   }
 
+  function getProduct(productId) {
+    return bagProducts.find((product) => product.id === productId);
+  }
+
   function updateProductQuantity(productId, quantity) {
     const product = bagProducts.find((product) => product.id === productId);
     product.quantity = Number(quantity);
@@ -55,6 +59,7 @@ export function BagProvider({ children }) {
         addProduct,
         removeProduct,
         containsProduct,
+        getProduct,
         updateProductQuantity,
         totalPurchasePrice,
         totalItems,
