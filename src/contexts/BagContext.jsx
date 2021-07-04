@@ -23,7 +23,10 @@ export function BagProvider({ children }) {
   }, [bagProducts]);
 
   function addProduct(product, quantity = 1) {
-    setBagProducts([...bagProducts, { ...product, quantity: quantity }]);
+    setBagProducts([
+      ...bagProducts,
+      { ...product, quantity: Number(quantity) },
+    ]);
   }
 
   function removeProduct(productId) {
