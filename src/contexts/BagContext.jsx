@@ -39,11 +39,15 @@ export function BagProvider({ children }) {
   }
 
   function updateProductQuantity(productId, quantity) {
-    const product = bagProducts.find((product) => product.id === productId);
-    product.quantity = Number(quantity);
-    calculateTotalItems();
-    calculateTotalPurchasePrice();
-    window.localStorage.setItem("bagProducts", JSON.stringify(bagProducts));
+    setBagProducts(
+      bagProducts.map((product) => {
+        if (product.id === productId) {
+          return { ...product, quantity: Number(quantity) };
+        } else {
+          return product;
+        }
+      })
+    );
   }
 
   function calculateTotalPurchasePrice() {

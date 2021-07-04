@@ -30,7 +30,6 @@ const ProductDetails = ({ product }) => {
     addProduct,
     removeProduct,
     updateProductQuantity,
-    containsProduct,
     getProduct,
   } = useBag();
 
@@ -41,7 +40,15 @@ const ProductDetails = ({ product }) => {
   const [addedToCart, setAddedToCart] = useState(false);
 
   useEffect(() => {
-    setAddedToCart(containsProduct(product.id));
+    const productInBag = getProduct(product.id);
+
+    if (productInBag) {
+      setAddedToCart(true);
+      setQuantity(productInBag.quantity);
+    } else {
+      setAddedToCart(false);
+      setQuantity(1);
+    }
   }, [product, bagProducts]);
 
   function handlePurchaseButton() {
