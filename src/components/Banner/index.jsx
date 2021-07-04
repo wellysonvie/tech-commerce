@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   Container,
   Content,
@@ -14,7 +16,9 @@ const Banner = ({ product }) => {
           <span>{product.discount}</span>
           <h1>{product.name}</h1>
           <p>{product.description}</p>
-          <PurchaseButton>Mais detalhes</PurchaseButton>
+          <Link href={`/products/${product.id}`}>
+            <PurchaseButton>Mais detalhes</PurchaseButton>
+          </Link>
         </ProductDescription>
         <ProductImage>
           <img src={product.image} alt={product.name} />

@@ -5,6 +5,7 @@ import {
   MdPerson,
   MdShoppingCart,
 } from "react-icons/md";
+import Link from "next/link";
 
 import CartModal from "../CartModal";
 import { useBag } from "../../contexts/BagContext";
@@ -38,7 +39,7 @@ const Header = () => {
         <HeaderInfoContent>
           <Info>
             <MdLocalShipping />
-            &nbsp; Frete grátis em pedidos a partir de $100
+            &nbsp; Frete grátis em pedidos a partir de $300
           </Info>
           <Info>
             <MdPhone />
@@ -48,9 +49,11 @@ const Header = () => {
       </HeaderInfo>
       <NavBar>
         <NavBarContent>
-          <Brand href="">
-            <span>Tech</span> Commerce
-          </Brand>
+          <Link href="/">
+            <Brand>
+              <span>Tech</span> Commerce
+            </Brand>
+          </Link>
           <Search>
             <Filter>
               <option value="">Tudo</option>

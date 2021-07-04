@@ -72,6 +72,8 @@ export const Brand = styled.a`
   font-weight: 300;
   color: var(--white);
 
+  cursor: pointer;
+
   span {
     font-weight: 500;
   }

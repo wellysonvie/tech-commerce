@@ -8,8 +8,18 @@ export function BagProvider({ children }) {
   const [totalItems, setTotalItems] = useState(0);
 
   useEffect(() => {
+    setBagProducts(() => {
+      const currentValue = JSON.parse(
+        window.localStorage.getItem("bagProducts")
+      );
+      return currentValue || [];
+    });
+  }, []);
+
+  useEffect(() => {
     calculateTotalItems();
     calculateTotalPurchasePrice();
+    window.localStorage.setItem("bagProducts", JSON.stringify(bagProducts));
   }, [bagProducts]);
 
   function addProduct(product, quantity = 1) {
@@ -24,11 +34,20 @@ export function BagProvider({ children }) {
     return bagProducts.some((product) => product.id === productId);
   }
 
+  function getProduct(productId) {
+    return bagProducts.find((product) => product.id === productId);
+  }
+
   function updateProductQuantity(productId, quantity) {
-    const product = bagProducts.find((product) => product.id === productId);
-    product.quantity = Number(quantity);
-    calculateTotalItems();
-    calculateTotalPurchasePrice();
+    setBagProducts(
+      bagProducts.map((product) => {
+        if (product.id === productId) {
+          return { ...product, quantity: Number(quantity) };
+        } else {
+          return product;
+        }
+      })
+    );
   }
 
   function calculateTotalPurchasePrice() {
@@ -55,6 +74,7 @@ export function BagProvider({ children }) {
         addProduct,
         removeProduct,
         containsProduct,
+        getProduct,
         updateProductQuantity,
         totalPurchasePrice,
         totalItems,

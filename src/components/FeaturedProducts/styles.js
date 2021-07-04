@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   width: min(75rem, 80vw);
   margin: 1.5rem auto;
+  margin-bottom: 4rem;
 `;
 
 export const Header = styled.header`

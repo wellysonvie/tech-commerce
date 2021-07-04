@@ -1,4 +1,7 @@
+import Link from "next/link";
+
 import { useBag } from "../../contexts/BagContext";
+
 import {
   Container,
   ProductImage,
@@ -13,7 +16,7 @@ const CartItem = ({ product }) => {
     <Container>
       <ProductImage src={product.images[0]} alt={product.name} />
       <ProductDescription>
-        <a>{product.name}</a>
+        <Link href={`/products/${product.id}`}>{product.name}</Link>
         <div>
           <p>{product.price}</p>
           <select
