@@ -8,8 +8,18 @@ export function BagProvider({ children }) {
   const [totalItems, setTotalItems] = useState(0);
 
   useEffect(() => {
+    setBagProducts(() => {
+      const currentValue = JSON.parse(
+        window.localStorage.getItem("bagProducts")
+      );
+      return currentValue || [];
+    });
+  }, []);
+
+  useEffect(() => {
     calculateTotalItems();
     calculateTotalPurchasePrice();
+    window.localStorage.setItem("bagProducts", JSON.stringify(bagProducts));
   }, [bagProducts]);
 
   function addProduct(product, quantity = 1) {
@@ -33,6 +43,7 @@ export function BagProvider({ children }) {
     product.quantity = Number(quantity);
     calculateTotalItems();
     calculateTotalPurchasePrice();
+    window.localStorage.setItem("bagProducts", JSON.stringify(bagProducts));
   }
 
   function calculateTotalPurchasePrice() {
